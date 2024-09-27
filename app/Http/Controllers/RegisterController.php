@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
@@ -11,19 +11,19 @@ class RegisterController extends Controller
 {
     public function index()
     {
+        if(Auth::check()){
+            return back();
+          }
         return view("auth.register");
     }
-    public function create(request $request)
+    public function create(Request $request)
     {
-
-        // dd($request);
-        // dd($request->last_name);
         $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:1|confirmed',
-            'password_confirmation' => 'required_with:password|same:password|min:1',
+            'password' => 'required|string|min:8|confirmed',
+            'password_confirmation' => 'required_with:password|same:password|min:8',
             'postalcode' => 'required|string|max:10',
             'street_name' => 'required|string|max:255',
             'house_number' => 'required',
@@ -45,7 +45,6 @@ class RegisterController extends Controller
             'comment' => $request->comment,
         ]);
 
-// dd("succes!");
     return redirect()->route('home')->with('success', 'User registered successfully!');
     }
 }
