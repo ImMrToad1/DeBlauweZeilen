@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\RegisterController;
-use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -28,21 +27,10 @@ Route::post('/login', [LoginController::class, 'store'])->name("login.store");
 Route::get('register', [RegisterController::class, 'index'])->name('register');
 Route::post('register', [RegisterController::class, 'create'])->name("register.create");
 
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::middleware(['auth'])->group(function () {
     Route::get("profile", [ProfileController::class , "index"])->name("profile");
     Route::post("profile", [ProfileController::class , "edit"])->name("profile.edit");
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
