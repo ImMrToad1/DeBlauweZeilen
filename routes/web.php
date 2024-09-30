@@ -1,5 +1,5 @@
 <?php
-use App\Http\Controllers\RegisterController;
+
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -7,7 +7,9 @@ use App\Models\User;
 
 
 
-Route::get('/', [HomeController::class, 'index'])->name("home");
+Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 
 Route::get('login', [LoginController::class, 'index']);
