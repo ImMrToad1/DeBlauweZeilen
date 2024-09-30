@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     use ValidatesRequests;
+
     public function index()
     {
         if(Auth::check()){
