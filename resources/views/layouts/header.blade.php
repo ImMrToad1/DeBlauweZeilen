@@ -12,23 +12,22 @@
             </li>
             @guest
                 <li class="nav-item">
-                    <a class="nav-link" href="login">Login</a>
+                    <a class="nav-link" href="{{ route('login') }}">Login</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="signup">Signup</a>
+                    <a class="nav-link" href="{{ route('register')}}">Signup</a>
                 </li>
             @endguest
             {{-- {{Auth::loginusingid(1)}} --}}
             @auth
                 <li class="nav-item dropdown">
 
-                    <button class="nav-link dropdown-toggle" type="button"
-                        data-bs-toggle="dropdown">{{ Auth::user()->name }}</button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                        <li><a class="dropdown-item" href="{{ route('auth.logout') }}">Logout</a></li>
-                    </ul>
-
+                        <button class="nav-link dropdown-toggle" type="button"
+                            data-bs-toggle="dropdown">{{ Auth::user()->name }}</button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="{{ route('profile')}}">Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ route('auth.logout') }}">Logout</a></li>
+                        </ul>
                 </li>
             @endauth
         </ul>
