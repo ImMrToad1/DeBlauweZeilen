@@ -16,8 +16,6 @@ class CursusenController extends Controller
     {
         $cursusus = Cursus::all();
 
-        // dd($cursusus);
-
         return view('cursusen', [
             'cursusus' => $cursusus,
         ]);
@@ -34,8 +32,6 @@ class CursusenController extends Controller
             'name' => 'required|string|max:255',
             'location' => 'required|string|max:255',
         ]);
-
-        // dd($request);
 
         Cursus::create([
             'name' => $request->name,
@@ -94,7 +90,6 @@ class CursusenController extends Controller
      */
     public function delete($id)
     {
-        // dd($id);
         $cursus = Cursus::findOrFail($id);
         $cursus->delete();
         $cursusus = Cursus::all();

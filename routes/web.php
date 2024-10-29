@@ -23,17 +23,18 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 // Route::get('login', [LoginController::class, 'index']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
-Route::post('/login', [LoginController::class, 'store'])->name("login.store");
-
+Route::post('/login', [LoginController::class, 'store'])->name('login.store');
 
 Route::get('register', [RegisterController::class, 'index'])->name('register');
 Route::post('register', [RegisterController::class, 'create'])->name("register.create");
 
 Route::get('/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
+Route::get('/cursus', [CursusenController::class, 'index'])->name('cursusen.index');
+
 Route::middleware(['auth'])->group(function () {
     Route::post('/cursus', [CursusenController::class, 'create'])->name('cursusen.create');
-    Route::get('/cursus', [CursusenController::class, 'index'])->name('cursusen.index');
+
     Route::get("profile", [ProfileController::class , "index"])->name("profile");
     Route::post("profile", [ProfileController::class , "edit"])->name("profile.edit");
 
