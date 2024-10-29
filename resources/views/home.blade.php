@@ -4,30 +4,25 @@
 
 @section('content')
 
-    <img src="images\boot.PNG" class="rounded mx-auto d-block w-25" >
+    <img src="images\boot.PNG" class="rounded mx-auto d-block w-25 mt-3 mb-3">
 
-    <p></p>
-
-    <div class="d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center mt-3 mb-3">
         <div class="text-center" style="max-width: 500px;">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, accusamus earum quidem provident dolorum
             pariatur dolor sunt quasi eaque, officiis veritatis. Illo provident voluptate necessitatibus dolorem tenetur
             minima veniam reiciendis.
         </div>
     </div>
-    <p></p>
 
-    <img src="images\zeillboot.PNG" class="rounded mx-auto d-block w-25" >
-    <p></p>
+    <img src="images\zeillboot.PNG" class="rounded mx-auto d-block w-25 mt-3 mb-3">
 
-    <div class="d-flex justify-content-center align-items-center">
+
+    <div class="d-flex justify-content-center align-items-center mt-3 mb-3">
         <div class="text-center" style="max-width: 500px;">
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, accusamus earum quidem provident dolorum
             pariatur dolor sunt quasi eaque, officiis veritatis. Illo provident voluptate necessitatibus dolorem tenetur
             minima veniam reiciendis.
         </div>
     </div>
-    <p></p>
-
 
 @endsection
