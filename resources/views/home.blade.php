@@ -3,12 +3,31 @@
 @section('title', 'Home | ' . config('app.name'))
 
 @section('content')
-    <div class="card">
-        <div class="card-header">
-            This is a card
-        </div>
-        <div class="card-body">
-            This is the card body!
+
+    <img src="images\boot.PNG" class="rounded mx-auto d-block w-25" >
+
+    <p></p>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="text-center" style="max-width: 500px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, accusamus earum quidem provident dolorum
+            pariatur dolor sunt quasi eaque, officiis veritatis. Illo provident voluptate necessitatibus dolorem tenetur
+            minima veniam reiciendis.
         </div>
     </div>
+    <p></p>
+
+    <img src="images\zeillboot.PNG" class="rounded mx-auto d-block w-25" >
+    <p></p>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <div class="text-center" style="max-width: 500px;">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem, accusamus earum quidem provident dolorum
+            pariatur dolor sunt quasi eaque, officiis veritatis. Illo provident voluptate necessitatibus dolorem tenetur
+            minima veniam reiciendis.
+        </div>
+    </div>
+    <p></p>
+
+
 @endsection

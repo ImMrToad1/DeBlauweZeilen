@@ -34,7 +34,7 @@ Route::get('/cursus', [CursusenController::class, 'index'])->name('cursusen.inde
 
 Route::middleware(['auth'])->group(function () {
     Route::post('/cursus', [CursusenController::class, 'create'])->name('cursusen.create');
-    Route::get('/cursus', [CursusenController::class, 'index'])->name('cursusen.index');
+
     Route::get("profile", [ProfileController::class , "index"])->name("profile");
     Route::post("profile", [ProfileController::class , "edit"])->name("profile.edit");
 
